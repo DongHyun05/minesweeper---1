@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>지뢰찾기</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                margin-left:auto; 
+                margin-right:auto;
+            }
+            td {
+                border: 1px solid #bbb;
+                text-align: center;
+                line-height: 50px;
+                width: 50px;
+                height: 50px;
+                background: gray;
+                color: gray;
+            }
+            td.opened {
+                background: white;
+            }
+            td.flag {
+                background: pink;
+            }
+            td.question {
+                background: orange;
+            }
+            #result{
+                font-size: 30px;
+                font-weight: bold;
+                color: red;
+                text-align: center;
+            }
+            #main{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            #explanation{
+                text-align: center;
+            }
+            #exec{
+                margin-left: 700px;
+                width: 120px;
+                height: 50px;
+                outline: 1px;
+                border: 2px solid black;
+                color: white;
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <input id="hor" type="number" placeholder="가로 길이" value="">
+            <input id="ver" type="number" placeholder="세로 길이" value="">
+            <input id="mine" type="number" placeholder="지뢰 갯수" value="">
+        <div>
+            <input type="button" id="exec" value=" 실행 " />
+            <!-- <input type="button" id="exec" value=" 실행 " onclick="settime(this)" /> -->
+        </div>
+
+        </div>
+        <table id="table">
+            <thead>
+                <tr>
+                    
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="result"></div>
+        <script src="지뢰찾기.js"></script>
+    </body>
+    <footer>
+        <div id="explanation">
+            <h1>게임 설명</h1>
+            <p>먼저 위에 <mark><strong>조건</strong></mark>을 작성해주세요.
+                <br><mark><strong>좌클릭</strong></mark>으로 선택하여 열 수 있고 <mark><strong>우클릭</strong></mark>은 깃발을 표시합니다.
+                <!-- <br>제한시간은 <strong><mark style="background-color:#ff0000;">3분 고정</mark></strong>입니다.</p> -->
+        </div>
+    </footer>
+</html>
